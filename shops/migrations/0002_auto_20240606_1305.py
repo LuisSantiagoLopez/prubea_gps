@@ -18,7 +18,7 @@ def load_data(apps, schema_editor):
                 objType = obj['type']
                 if objType == 'node': 
                     tags = obj['tags']
-                    name = tags.gat('name', 'no-name')
+                    name = tags.get('name', 'no-name')
                     longitude = obj.get('lon', 0)
                     latitude = obj.get('lat', 0)
                     location = fromstr(f'POINT({longitude} {latitude})', srid = 4326)
