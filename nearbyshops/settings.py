@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     #3rd party 
     'django.contrib.gis',
+
+    #local
+    'shops.apps.ShopsConfig',
 ]
 
 MIDDLEWARE = [
