@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '174.138.34.226']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -131,3 +132,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+import os
+
+if os.name == 'posix':
+    os.environ['GDAL_LIBRARY_PATH'] = '/usr/lib/libgdal.so'
