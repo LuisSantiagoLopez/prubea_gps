@@ -134,6 +134,4 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 import os
-
-if os.name == 'posix':
-    os.environ['GDAL_LIBRARY_PATH'] = '/usr/lib/libgdal.so'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
